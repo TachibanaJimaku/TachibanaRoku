@@ -7,7 +7,7 @@ import zlib
 
 import websockets
 
-from module.logger import Logger
+from logger import Logger
 
 ACTION_HEARTBEAT = 2
 ACTION_HEARTBEAT_REPLY = 3

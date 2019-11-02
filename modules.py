@@ -1,7 +1,7 @@
 import argparse
 import os
 
-from module.logger import Logger
+from logger import Logger
 
 __all__ = ['on_start', 'on_chunk', 'on_danmaku', 'on_end', 'request_args']
 
