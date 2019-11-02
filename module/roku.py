@@ -7,8 +7,7 @@ import random
 import time
 import urllib.request
 
-import danmaku
-import modules
+from module import danmaku, modules
 from module.logger import Logger
 
 CHUNK_SIZE = 16 * 1024
