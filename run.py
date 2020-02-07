@@ -63,10 +63,12 @@ class BiliBiliLiveRecorder(BiliBiliLive):
 
 
 if __name__ == '__main__':
-    print(sys.argv)
     if len(sys.argv) == 2:
         input_id = str(sys.argv[1])
     else:
-        raise ZeroDivisionError('请检查输入的命令是否正确 例如：python3 run.py 10086')
+        input_id = input("输入房间号: ")
+    
+        if not os.path.exists('files'):
+            os.makedirs('files')
 
     BiliBiliLiveRecorder(input_id).run()

@@ -133,4 +133,9 @@ dmypy.json
 # Pyre type checker
 .pyre/
 
+*.spec
+
 files/
+build/
+dist/
+.DS_Store
