@@ -4,6 +4,7 @@ import sys
 import time
 import requests
 import urllib3
+import webbrowser
 
 import utils
 from Live import BiliBiliLive
@@ -52,6 +53,7 @@ class BiliBiliLiveRecorder(BiliBiliLive):
     def run(self):
         while True:
             try:
+                webbrowser.open("https://api.live.bilibili.com/room/v1/Room/playUrl?cid=" + self.room_id + "&qn=0&platform=web", new=1, autoraise=True)
                 urls = input(
                     "请打开 https://api.live.bilibili.com/room/v1/Room/playUrl?cid=" + self.room_id + "&qn=0&platform=web 输入DURL: ")
                 filename = utils.generate_filename(self.room_id)
